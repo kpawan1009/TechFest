@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+<!--<script>-->
+<!--    history.pushState(null, document.title, location.href);-->
+<!--    history.back();-->
+<!--    history.forward();-->
+<!--    window.apostate = function () {-->
+<!--        history.go(1);-->
+<!--    };-->
+<!--</script>-->
+    <style>
+ just{
+        text-align: center;
+text-justify: inter-word;
+        }
+        .footer {
+        clear: both;
+        position: absolute;
+        bottom: 10px;
+        clear: both;
+        width: 1500px;
+        }
+            .btn-space {
+        margin-right: 15px;
+    }
+            .buttons-flex {
+                 display: -webkit-flex;
+                 display: flex;
+                 -webkit-justify-content: space-between;
+                 justify-content: space-between;
+             }
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Question 1</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand">Unmasked Decryption Challenge</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </div>
+            <div class="mx-2">
+                 <button><a href="/leader">Submit Test Now</a></button>
+            </div>
+        </div>
+    </nav>
+<br><br><br>
+  <div>
+      {% block content %}
+
+   {% for context in context %}
+    <button style="text-decoration: none;"> Current Marks :  {{context.totalmarks}}
+    </button>
+          <button style="text-decoration: none;">
+              Question    1    : {{context.marks1}}
+          </button>
+  {% endfor %}
+ {% endblock %}
+                 <button class="just" style="background-color:#A6CF98;">Easy</button>
+</div>
+
+<hr>
+
+<div style="margin:auto" align="center">
+                <div>
+                    <h5 >Question 1</h5>
+                </div>
+                <div>
+                    <form method="POST" id="question">
+                          {% csrf_token %}
+
+
+                        <div class="card" style="width:1200px;">
+                          <div class="card-body">
+                              <div>
+
+                                  <div><label for="questionans">
+
+Given the name bankruptcy. Find an anagram of it which can act as a BST's inorder traversal. Return the Ascii Values (without space or comma) after encrypting it by adding key to it and the key to be added can be found by following riddle
+ key for characters at positions i : <br>
+ if i%3==0 : 7, 12, 19, ?, 39<br>
+ if i%3==1 : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 , ?<br>
+ if i%3==2 : Number of pairs of letters in the word " CASTRAPHONE" which have as many letters between them in the word as in the alphabet?
+<br></br>
+Use your coding skills or mind and find the correct answer .....
+</label>
+                                      <hr>
+
+                                      </div>
+                                          <div>
+                            <input type="text" class="form-control" id="questionans" name="questionans" required>
+                        </div>
+                              </div>
+                        <input type="submit" class="btn btn-primary" value="Submit" name="form1">
+                        <button type="reset" class="btn btn-primary my-4">Reset</button>
+                          </div>
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+  </div>
+
+           <div align="center" class="footer">
+                    <button class="btn-space  btn " style="background-color:#E0F4FF"><a href="/question1" style="text-decoration: none;">Question 1</a></button>
+                     <button class="btn-space  btn " style="background-color:#E0F4FF"><a href="/question2"  style="text-decoration: none;">Question 2</a></button>
+                      <button class="btn-space  btn " style="background-color:#E0F4FF"><a href="/question3" style="text-decoration: none;">Question 3</a></button>
+                      <button class="btn-space  btn " style="background-color:#E0F4FF"><a href="/question4" style="text-decoration: none;">Question 4</a></button>
+                      <button class="btn-space  btn " style="background-color:#E0F4FF"> <a href="/question5" style="text-decoration: none;">Question 5</a></button>
+                      <button class="btn-space  btn " style="background-color:#E0F4FF"><a  href="/question6" style="text-decoration: none;">Question 6</a></button>
+                      <button class="btn-space btn" style="background-color:#E0F4FF"><a  href="/question7" style="text-decoration: none;">Question 7</a></button>
+
+            </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

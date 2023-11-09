@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+<!--<script>-->
+<!--    history.pushState(null, document.title, location.href);-->
+<!--    history.back();-->
+<!--    history.forward();-->
+<!--    window.apostate = function () {-->
+<!--        history.go(1);-->
+<!--    };-->
+<!--</script>-->
+    <style>
+ just{
+        text-align: justify;
+text-justify: inter-word;
+        }
+        .footer {
+        clear: both;
+        position: absolute;
+        bottom: 10px;
+        clear: both;
+        width: 1500px;
+        }
+            .btn-space {
+        margin-right: 15px;
+    }
+            .buttons-flex {
+                 display: -webkit-flex;
+                 display: flex;
+                 -webkit-justify-content: space-between;
+                 justify-content: space-between;
+             }
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Question 6</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand">Unmasked Decryption Challenge</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </div>
+            <div class="mx-2">
+                 <button><a href="/leader">Submit Test Now</a></button>
+            </div>
+        </div>
+     </nav>
+<br><br><br>
+  <div>
+      {% block content %}
+
+   {% for context in context %}
+    <button> Current Marks :  {{context.totalmarks}}
+    </button>
+          <button>
+              Question 6 : {{context.marks6}}
+          </button>
+  {% endfor %}
+ {% endblock %}
+
+       <button class="just" style="background-color:#F3B664;">Medium</button>
+</div>
+
+<hr>
+
+<div style="margin:auto" align="center">
+
+                <div>
+                    <h5 >Question 6</h5>
+                </div>
+                <div>
+                    <form method="POST" id="question">
+                          {% csrf_token %}
+
+
+                        <div class="card" style="width:1200px;">
+                          <div class="card-body">
+                              <div>
+                            <label for="questionans"> There are 18 letters and from the key we understand that there are 6 columns. So there are 3 rows and 6 columns
+so by arranging the letters from key 5 2 6 3 4 1.  <br>
+As first 3 letters to 5th column, next to 2nd column and vice versa.
+key
+                                <br>
+                                1	2	3	4	5	6
+ 	  <br>I	H	E	T	X	S
+ 	  <br>I	M	2	A	2	S
+ 	  <br>A	E	Y	2	!	S
+
+  <br>
+Now arranging the letters to form a sentence by seeing the first row. as IHETXS can be rearranged as THIS EX SO THE TABLE CHANGE TO
+  <br>
+  <br>4	2	1	6	3	5
+  <br>T	H	I	S	E	X
+  <br>A	M	I	S	2	2
+  <br>2	E	A	S	Y	!
+
+  <br>
+</label><hr>
+                                  <input type="text" class="form-control" id="questionans" name="questionans" required>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Submit" name="form1">
+                        <button type="reset" class="btn btn-primary my-4">Reset</button>
+                          </div>
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+  </div>
+
+           <div align="center" class="footer">
+                    <button class="btn-space  btn " style="background-color:#E0F4FF"><a href="/question1" style="text-decoration: none;">Question 1</a></button>
+
+               <button class="btn-space  btn " style="background-color:#E0F4FF"><a href="/question2"  style="text-decoration: none;">Question 2</a></button>
+                      <button class="btn-space  btn " style="background-color:#E0F4FF"><a href="/question3" style="text-decoration: none;">Question 3</a></button>
+                      <button class="btn-space  btn " style="background-color:#E0F4FF"><a href="/question4" style="text-decoration: none;">Question 4</a></button>
+                      <button class="btn-space  btn " style="background-color:#E0F4FF"> <a href="/question5" style="text-decoration: none;">Question 5</a></button>
+                      <button class="btn-space  btn " style="background-color:#E0F4FF"><a  href="/question6" style="text-decoration: none;">Question 6</a></button>
+                      <button class="btn-space btn" style="background-color:#E0F4FF"><a  href="/question7" style="text-decoration: none;">Question 7</a></button>
+
+            </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
